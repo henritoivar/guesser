@@ -1,0 +1,1 @@
+<a href="{{ $authUrl }}">Log in with Instagram.</a>

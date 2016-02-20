@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a664f764-e52d-4c61-bf30-b81e40c45a99" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/instagram.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/auth.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/.env.example" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Console/Commands/Inspire.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Console/Kernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Events/Event.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Exceptions/Handler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Controllers/Auth/AuthController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Controllers/Auth/PasswordController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Controllers/Controller.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Kernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Middleware/Authenticate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Middleware/EncryptCookies.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Middleware/VerifyCsrfToken.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/Requests/Request.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Http/routes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Jobs/Job.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Listeners/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Policies/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Providers/AppServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Providers/AuthServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Providers/EventServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/Providers/RouteServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/app/User.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/artisan" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/bootstrap/app.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/bootstrap/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/bootstrap/cache/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/app.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/auth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/broadcasting.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/compile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/filesystems.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/mail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/queue.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/services.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/session.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/config/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/database/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/database/factories/ModelFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/database/migrations/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/database/seeds/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/database/seeds/DatabaseSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/phpunit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/public/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/public/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/public/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/public/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/public/web.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/assets/sass/app.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/lang/en/auth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/lang/en/pagination.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/lang/en/passwords.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/lang/en/validation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/views/errors/503.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/views/vendor/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/resources/views/welcome.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/server.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/storage/app/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/storage/app/public/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/storage/framework/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/storage/framework/cache/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/storage/framework/sessions/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/storage/framework/views/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/storage/logs/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/tests/ExampleTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/guesser/tests/TestCase.php" afterPath="" />
+    </list>
+    <ignored path="guesser.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="guesser" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.31626236">
+              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/resources/views/auth.blade.php" />
+        <option value="$PROJECT_DIR$/config/instagram.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/GameController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a664f764-e52d-4c61-bf30-b81e40c45a99" name="Default" comment="" />
+      <created>1455984292521</created>
+      <option name="number" value="Default" />
+      <updated>1455984292521</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944345" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07187781">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08625337">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <marker date="1455984322999" expanded="false" signature="50:148" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="174:5901" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="209:303" placeholder=" Show the application login form. ..." />
+            <marker date="1455984322999" expanded="true" signature="336:387" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="396:490" placeholder=" Show the application login form. ..." />
+            <marker date="1455984322999" expanded="true" signature="528:770" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="686:727" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="779:933" placeholder=" Handle a login request to the application. ..." />
+            <marker date="1455984322999" expanded="true" signature="983:1034" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="1043:1197" placeholder=" Handle a login request to the application. ..." />
+            <marker date="1455984322999" expanded="true" signature="1243:2482" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="1695:1809" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="1964:2049" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="2355:2417" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="2491:2614" placeholder=" Validate the user login request. ..." />
+            <marker date="1455984322999" expanded="true" signature="2671:2807" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="2702:2799" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="2713:2798" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="2816:3011" placeholder=" Send the response after the user was authenticated. ..." />
+            <marker date="1455984322999" expanded="true" signature="3093:3406" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="3125:3183" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="3238:3338" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="3415:3565" placeholder=" Get the failed login response instance. ..." />
+            <marker date="1455984322999" expanded="true" signature="3632:3871" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="3697:3747" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="3774:3863" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="3775:3862" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="3880:3952" placeholder=" Get the failed login message. ..." />
+            <marker date="1455984322999" expanded="true" signature="4001:4161" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="4170:4320" placeholder=" Get the needed authorization credentials from the request. ..." />
+            <marker date="1455984322999" expanded="true" signature="4378:4457" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="4466:4564" placeholder=" Log the user out of the application. ..." />
+            <marker date="1455984322999" expanded="true" signature="4598:4642" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="4651:4749" placeholder=" Log the user out of the application. ..." />
+            <marker date="1455984322999" expanded="true" signature="4780:4950" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="4959:5018" placeholder=" Get the guest middleware for the application. ..." />
+            <marker date="1455984322999" expanded="true" signature="5058:5158" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="5167:5262" placeholder=" Get the login username to be used by the controller. ..." />
+            <marker date="1455984322999" expanded="true" signature="5300:5391" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="5400:5499" placeholder=" Determine if the class is using the ThrottlesLogins trait. ..." />
+            <marker date="1455984322999" expanded="true" signature="5554:5677" placeholder="{...}" />
+            <marker date="1455984322999" expanded="true" signature="5585:5669" placeholder="..." />
+            <marker date="1455984322999" expanded="true" signature="5686:5781" placeholder=" Get the guard to be used during authentication. ..." />
+            <marker date="1455984322999" expanded="true" signature="5817:5899" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08625337">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding>
+            <marker date="1455984322992" expanded="true" signature="82:267" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455983902137" expanded="true" signature="113:1462" placeholder="{...}" />
+            <marker date="1455983902137" expanded="true" signature="123:290" placeholder=" The application's global HTTP middleware stack. ..." />
+            <marker date="1455983902137" expanded="true" signature="322:406" placeholder="..." />
+            <marker date="1455983902137" expanded="true" signature="417:498" placeholder=" The application's route middleware groups. ..." />
+            <marker date="1455983902137" expanded="true" signature="536:956" placeholder="..." />
+            <marker date="1455983902137" expanded="true" signature="555:889" placeholder="..." />
+            <marker date="1455983902137" expanded="true" signature="911:949" placeholder="..." />
+            <marker date="1455983902137" expanded="true" signature="967:1120" placeholder=" The application's route middleware. ..." />
+            <marker date="1455983902137" expanded="true" signature="1157:1458" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455983902137" expanded="true" signature="148:299" placeholder="{...}" />
+            <marker date="1455983902137" expanded="true" signature="158:251" placeholder=" The names of the cookies that should not be encrypted. ..." />
+            <marker date="1455983902137" expanded="true" signature="279:295" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455983902152" expanded="false" signature="43:88" placeholder="..." />
+            <marker date="1455983902152" expanded="true" signature="119:518" placeholder="{...}" />
+            <marker date="1455983902152" expanded="true" signature="129:314" placeholder=" Handle an incoming request. ..." />
+            <marker date="1455983902152" expanded="true" signature="383:516" placeholder="{...}" />
+            <marker date="1455983902152" expanded="true" signature="433:476" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455983902152" expanded="true" signature="157:310" placeholder="{...}" />
+            <marker date="1455983902152" expanded="true" signature="167:262" placeholder=" The URIs that should be excluded from CSRF verification. ..." />
+            <marker date="1455983902152" expanded="true" signature="290:306" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455983902137" expanded="false" signature="43:88" placeholder="..." />
+            <marker date="1455983902137" expanded="true" signature="108:675" placeholder="{...}" />
+            <marker date="1455983902137" expanded="true" signature="118:303" placeholder=" Handle an incoming request. ..." />
+            <marker date="1455983902137" expanded="true" signature="372:673" placeholder="{...}" />
+            <marker date="1455983902137" expanded="true" signature="422:633" placeholder="..." />
+            <marker date="1455983902137" expanded="true" signature="483:551" placeholder="..." />
+            <marker date="1455983902137" expanded="true" signature="559:623" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/instagram.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.057502247">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+          <folding>
+            <marker date="1455988059079" expanded="true" signature="15:129" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="48" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455983902305" expanded="true" signature="21:1021" placeholder="..." />
+            <marker date="1455983902305" expanded="true" signature="32:839" placeholder="..." />
+            <marker date="1455983902305" expanded="true" signature="185:827" placeholder="..." />
+            <marker date="1455983902305" expanded="true" signature="210:255" placeholder="{...}" />
+            <marker date="1455983902305" expanded="true" signature="274:476" placeholder="{...}" />
+            <marker date="1455983902305" expanded="true" signature="501:629" placeholder="{...}" />
+            <marker date="1455983902305" expanded="true" signature="652:742" placeholder="{...}" />
+            <marker date="1455983902305" expanded="true" signature="763:811" placeholder="{...}" />
+            <marker date="1455983902305" expanded="true" signature="850:1013" placeholder="..." />
+            <marker date="1455983902305" expanded="true" signature="882:1001" placeholder="..." />
+            <marker date="1455983902305" expanded="true" signature="916:986" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12938005">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <marker date="1455985538124" expanded="false" signature="33:220" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="225:1033" placeholder=" @method ResponseInterface get($uri, array $options = []) ..." />
+            <marker date="1455985538124" expanded="true" signature="1075:14523" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="1153:2667" placeholder=" Clients accept an array of constructor parameters. ..." />
+            <marker date="1455985538124" expanded="true" signature="2721:3058" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="2769:2835" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="2929:3007" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="3102:3517" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="3140:3264" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="3596:3866" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="3750:3858" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="3940:4067" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="4144:4946" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="4623:4666" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="5018:5153" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="5200:5351" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="5403:5621" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="5452:5538" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="5630:5723" placeholder=" Configures the default options for a client. ..." />
+            <marker date="1455985538124" expanded="true" signature="5779:7246" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="5807:6043" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="6159:6217" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="6265:6324" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="6371:6512" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="6641:6706" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="6802:6890" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="6898:7239" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="7037:7154" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="7095:7140" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="7255:7402" placeholder=" Merges default options into the array. ..." />
+            <marker date="1455985538124" expanded="true" signature="7451:8563" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="7537:7720" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="7920:8273" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="8019:8126" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="8169:8263" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="8441:8531" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="8472:8521" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="8572:8911" placeholder=" Transfers the given request and applies request options. ..." />
+            <marker date="1455985538124" expanded="true" signature="8986:9642" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="9061:9162" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="9245:9359" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="9476:9555" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="9580:9635" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="9651:9841" placeholder=" Applies the array of request options to a request. ..." />
+            <marker date="1455985538124" expanded="true" signature="9921:14092" placeholder="{...}" />
+            <marker date="1455985538124" expanded="true" signature="9996:10657" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="10044:10426" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="10703:10869" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="10981:11074" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11118:11400" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11167:11267" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11275:11350" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11441:11650" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11487:11538" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11692:12420" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11944:12410" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="11974:12136" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="12167:12397" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="12462:12859" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="12538:12632" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="12671:12772" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="12900:13099" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="13227:13454" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="13568:14059" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="13733:13865" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="13781:13851" placeholder="..." />
+            <marker date="1455985538124" expanded="true" signature="14128:14521" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21563342">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <marker date="1455990167474" expanded="false" signature="11:94" placeholder="..." />
+            <marker date="1455990167474" expanded="true" signature="136:691" placeholder="{...}" />
+            <marker date="1455990167474" expanded="true" signature="146:206" placeholder=" Run the migrations. ..." />
+            <marker date="1455990167474" expanded="true" signature="233:544" placeholder="{...}" />
+            <marker date="1455990167474" expanded="true" signature="263:536" placeholder="..." />
+            <marker date="1455990167474" expanded="true" signature="301:535" placeholder="..." />
+            <marker date="1455990167474" expanded="true" signature="553:617" placeholder=" Reverse the migrations. ..." />
+            <marker date="1455990167474" expanded="true" signature="646:689" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3306379">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding>
+            <marker date="1455990461270" expanded="true" signature="114:498" placeholder="{...}" />
+            <marker date="1455990461270" expanded="true" signature="124:203" placeholder=" The attributes that are mass assignable. ..." />
+            <marker date="1455990461270" expanded="true" signature="233:310" placeholder="..." />
+            <marker date="1455990461270" expanded="true" signature="321:411" placeholder=" The attributes excluded from the model's JSON form. ..." />
+            <marker date="1455990461270" expanded="true" signature="439:494" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91374665">
+          <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+          <folding>
+            <marker date="1455990706335" expanded="true" signature="44:169" placeholder="..." />
+            <marker date="1455990706335" expanded="true" signature="210:1976" placeholder="{...}" />
+            <marker date="1455990706335" expanded="true" signature="245:653" placeholder="..." />
+            <marker date="1455990706335" expanded="true" signature="294:469" placeholder="..." />
+            <marker date="1455990706335" expanded="true" signature="707:1974" placeholder="{...}" />
+            <marker date="1455990706335" expanded="true" signature="808:1108" placeholder="..." />
+            <marker date="1455990706335" expanded="true" signature="1581:1738" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GameController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14375561">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <marker date="1455990757164" expanded="false" signature="44:129" placeholder="..." />
+            <marker date="1455990757164" expanded="true" signature="170:242" placeholder="{...}" />
+            <marker date="1455990757164" expanded="true" signature="199:240" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31626236">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
