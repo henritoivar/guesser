@@ -1,0 +1,163 @@
+$border-radius-smaller:       2px !default;
+
+$gap-1: 2px;
+$gap-2: 4px;
+$gap-3: 8px;
+$gap-4: 12px;
+$gap-5: 16px;
+$gap-6: 24px;
+$gap-7: 32px;
+$gap-8: 44px;
+$gap-9: 56px;
+$gap-10: 72px;
+$gap-11: 112px;
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$gray-primary: rgba(0,0,0,0.87);
+$gray-secondary: rgba(0,0,0,0.54);
+
+$brand-pink:            #C2185B;
+
+$brand-primary:         #673AB7;
+$brand-success:         #388E3C;
+$brand-info:            #0097A7;
+$brand-warning:         #F57C00;
+$brand-danger:          #D32F2F;
+$brand-purple:          #673AB7;
+
+$body-bg:               #FFF9C4;
+
+$font-family-sans-serif:  'Roboto', sans-serif;
+$font-family-serif:        'Noto Serif', serif;
+
+$text-color:            $gray-primary;
+$headings-color:          $text-color;
+$headings-font-weight:    400;
+
+/* override icon-font-path value */
+$icon-font-path: "../lib/bootstrap-sass/assets/fonts/bootstrap/";
+
+//** Text color for `<input>`s
+$input-color:                    $gray;
+//** `<input>` border color
+$input-border:                   #E8E8E8;
+
+//** `<input disabled>` background color
+$input-bg-disabled:              #f5f5f5;
+
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+$input-border-radius:            0;
+//** Large `.form-control` border radius
+$input-border-radius-large:      0;
+//** Small `.form-control` border radius
+$input-border-radius-small:      0;
+
+$btn-border-radius-base:         $gap-1;
+$btn-border-radius-large:        $gap-1;
+$btn-border-radius-small:        $gap-1;
+$btn-font-weight:                500;
+
+$border-radius-large: $gap-1;
+
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $btn-primary-bg;
+
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $btn-success-bg;
+
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $btn-info-bg;
+
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             $btn-warning-bg;
+
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $btn-danger-bg;
+
+//== Breadcrumbs
+//
+//##
+
+$breadcrumb-padding-vertical:   $gap-3;
+$breadcrumb-padding-horizontal: $gap-5;
+//** Breadcrumb background color
+$breadcrumb-bg:                 #fff;
+
+
+$nav-link-padding:                          12px 16px;
+
+$panel-border-radius:         $border-radius-smaller;
+$panel-default-border:        #fff;
+$panel-heading-padding:      $gap-3 $gap-5;
+$panel-footer-padding:       $gap-3;
+
+//== Progress bars
+//
+//##
+
+//** Background color of the whole progress component
+$progress-bg:                 #f5f5f5 !default;
+//** Variable for setting rounded corners on progress bar.
+$progress-border-radius:      0;
+
+$nav-pills-border-radius:                   0;
+
+$bootstrap-sass-asset-helper: false;
+
+//== Tabs
+$nav-tabs-border-color:                     #ddd !default;
+
+$nav-tabs-link-hover-border-color:          $gray-lighter !default;
+
+$nav-tabs-active-link-hover-bg:             $body-bg !default;
+$nav-tabs-active-link-hover-color:          $gray !default;
+$nav-tabs-active-link-hover-border-color:   #ddd !default;
+
+$nav-tabs-justified-link-border-color:            #ddd !default;
+$nav-tabs-justified-active-link-border-color:     $body-bg !default;
+
+//== Modals
+//
+//##
+
+
+//** Padding applied to the modal body
+$modal-inner-padding:         0 $gap-6 $gap-6 $gap-6;
+
+//** Padding applied to the modal title
+$modal-title-padding:         $gap-6 $gap-6 20px $gap-6;
+//** Modal content border color
+$modal-content-border-color:                   transparent;
+//** Modal header border color
+$modal-header-border-color:   $modal-content-border-color;
+
+$sidebar-width: 300px;
+
+
+// Basics of a navbar
+$navbar-height:                    50px;
+$navbar-height-computed:           $navbar-height + 1;
+
+$navbar-default-color:             $gray-primary;
+$navbar-default-bg:                #fff;
+$navbar-default-border:            #fff;
+
+// Navbar links
+$navbar-default-link-color:                $gray-primary;
+$navbar-default-link-hover-color:          $gray-primary;
+$navbar-default-link-active-color:         $gray-primary;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           transparent;
+$navbar-default-toggle-icon-bar-bg:        transparent;
+$navbar-default-toggle-border-color:       transparent;
+
+$thumbnail-border-radius: 0;

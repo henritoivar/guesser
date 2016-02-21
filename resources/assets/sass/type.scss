@@ -1,0 +1,43 @@
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+	font-family: 'Noto Serif', serif;
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+}
+
+// Page header
+// -------------------------
+.page-header {
+	padding-top: $gap-8;
+  padding-bottom: $gap-10;
+  margin: 0 0 -53px 0;
+  border-bottom: 0;
+}
+.text-light {
+	color: #fff;
+}
+
+.material-icons {
+		vertical-align: middle;
+}
+
+// Some weirdo-shit bug fix
+a.btn {
+	.material-icons {
+		// padding-top: $gap-3;
+	}
+}
+// Rules for sizing the icon.
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+// Rules for using icons as black on a light background.
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+// Rules for using icons as white on a dark background.
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

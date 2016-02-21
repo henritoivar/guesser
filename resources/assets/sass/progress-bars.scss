@@ -1,0 +1,14 @@
+// Outer container
+.progress {
+  height: $gap-1;
+  @include box-shadow(none);
+}
+.progress-overall {
+	position: absolute;
+	left: 0;
+	right: 0;
+  height: 6px;
+}
+.progress-overall--top {
+	top: 0;
+}
