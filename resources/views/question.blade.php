@@ -11,7 +11,7 @@
                 <!-- image container -->
                 <div class="panel panel-default panel-guesser relative">
                     <div class="panel-body no-padding">
-                        <img class="img-responsive" src="{{ $correct['url_c'] }}" alt="">
+                        <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}" class="img-responsive" src="{{ $correct['url_c'] }}" alt="">
                     </div>
                     <div class="panel-footer">
                         @foreach($options as $option)
