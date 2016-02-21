@@ -16,6 +16,7 @@
                 center: latlng,
                 minZoom: 3,
                 streetViewControl: false,
+                mapTypeControl: false,
                 //zoomControl: false,
                 panControl: false
             };
