@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,6 +23,6 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('home', 'GameController@home');
-    Route::get('question', 'GameController@getQuestion');
+    Route::get('/', 'GameController@showQuestion');
+    Route::post('/guess', 'GameController@guess');
 });

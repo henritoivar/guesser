@@ -12,7 +12,7 @@ use Session;
 
 class GameController extends Controller
 {
-    public function home()
+    public function showQuestion()
     {
         // Get our options
         $options = $this->getOptions();
@@ -23,7 +23,18 @@ class GameController extends Controller
         // Remember the correct answer
         Session::put('correct', $correct);
 
-        return view('home')->with(compact('options', 'correct'));
+        return view('question')->with(compact('options', 'correct'));
+    }
+
+    public function guess(Request $request){
+        // Check if answer is correct
+        $correct = Session::get('correct');
+
+        if ($correct['id'] === $request->get('answer')) {
+            return response(['correctAnswer' => true, 'message' => 'Correct answer!'])->json();
+        }
+
+        return response(['correctAnswer' => false, 'message' => 'Wrong answer!'])->json();
     }
 
     private function getOptions(){
@@ -33,8 +44,8 @@ class GameController extends Controller
         $params = array(
             'method' => 'flickr.photos.search',
             'api_key' => '9b90f979966452f5c7ce6ab915022473',
-            'lat' => '37.7925891',  /*'59.4427685',*/
-            'lon' => '-122.4071576', /*'24.731148',*/
+            'lat' => /*'37.7925891',*/  '59.4427685',
+            'lon' => /*'-122.4071576',*/ '24.731148',
             'has_geo' => 1,
             'format' => 'json',
             'nojsoncallback' => 1,
