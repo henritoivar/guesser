@@ -1,0 +1,22 @@
+.modal-title {
+	font-weight: 700;
+}
+.modal-footer {
+  padding: $gap-3;
+}
+.modal-body {
+	color: $gray-secondary;
+}
+
+// Custom modal
+.modal--uploads {
+	.col-xs-12 {
+		padding: 0;
+	}
+	.panel {
+		margin-bottom: 0;
+	}
+	.modal-header {
+		padding: $gap-6 $gap-5 $gap-5 $gap-5;
+	}
+}

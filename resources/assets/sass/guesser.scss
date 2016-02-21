@@ -1,0 +1,67 @@
+// guesser specific styles
+.panel-guesser {
+	overflow: hidden;
+	&:after {
+		content: 'Correct!';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin-top: -50px;
+    margin-left: -100px;
+    color: $brand-primary;
+    font-size: $gap-8;
+    opacity: 0;
+    animation: roll-in 1s forwards;
+    animation-delay: 0.5s;
+	}
+}
+.guesser-title {
+	font-size: $gap-10;
+	color: $brand-purple;
+	margin-top: $gap-10;
+	margin-bottom: $gap-10;
+}
+.ripple {
+	&:before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    background-color: #eee;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: ripple-animation 1s forwards;
+	}
+}
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 1;
+    }
+}
+
+@keyframes roll-in {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}

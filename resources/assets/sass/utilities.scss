@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+}
+
+.display-b {
+    display: block;
+}
+.affix--left {
+    left: 0;
+}
+
+.relative {
+    position: relative;
+}
+.list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.padding-top {
+    padding-top: $gap-6;
+}
+
+.padding-top--navbar {
+    padding-top: $gap-11;
+}
+
+.padding-tb--md {
+    padding: $gap-6;
+}
+
+.padding-b--lg {
+    padding-bottom: $gap-11;
+}
+
+.padding-tb--lg {
+    padding-top: $gap-11;
+    padding-bottom: $gap-11;
+}
+.margin-b--lg {
+    margin-bottom: $gap-11;
+}
+.font-serif {
+	font-family: $font-family-serif;
+}
+
+.main-item {
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+    .panel-title {
+        color: $text-color;
+    }
+}
+
+.img-full {
+    width: 100%;
+}

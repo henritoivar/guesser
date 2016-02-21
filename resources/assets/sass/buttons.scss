@@ -1,0 +1,89 @@
+.btn {
+	min-height: 36px;
+	text-transform: uppercase;
+	@include button-size(0, $gap-3, $font-size-base, 34px, $btn-border-radius-base);
+  @include transition(0.25s all ease-in-out);
+}
+.btn-link {
+	font-weight: $btn-font-weight;
+  
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $gray-lighter;
+  }
+
+  span {
+    padding-left: $gap-3;
+  }
+}
+
+a.btn-link {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-link--default {
+  color: $gray-secondary;
+
+  &:hover, &:focus {
+    color: $gray-primary;
+  }
+}
+.btn-link--primary {
+  color: $brand-primary;
+  
+  &:hover,
+  &:focus {
+    color: $brand-primary;
+  } 
+}
+.btn-link--danger {
+  color: $brand-danger;
+  
+  &:hover,
+  &:focus {
+    color: $brand-danger;
+  }
+}
+
+// RAISED BUTTON
+.btn--raised {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn--raised {
+    &:hover, &:active {
+        box-shadow: 0 7px 18px 0 rgba(0, 0, 0, 0.16), 0 7px 24px 0 rgba(0, 0, 0, 0.12);   
+    }
+}
+
+// FLOATING ACTION BUTTON
+.btn--floating {
+  position: absolute;
+  top: -28px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  line-height: 56px;
+  color: #fff;
+  background-color: $brand-danger;
+  @include box-shadow(0px 2px 10px rgba(0,0,0,.3),0px 0px 1px rgba(0,0,0,.1),inset 0px 1px 0px rgba(255,255,255,.25),inset 0px -1px 0px rgba(0,0,0,.15));
+  z-index: 9;
+
+  &:hover {
+    color: #fff;
+    background-color: lighten($brand-danger, 10%);
+    @include box-shadow(0px 5px 5px rgba(0,0,0,.2),0px 10px 14px rgba(0,0,0,.1),inset 0px 1px 0px rgba(255,255,255,.25),inset 0px -1px 0px rgba(0,0,0,.10));
+
+  }
+
+  .material-icons {
+    vertical-align: middle;
+    margin-top: -8px;
+  }
+}

@@ -1,0 +1,45 @@
+// PANEL STYLES
+.panel {
+  @include box-shadow(0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22));
+  border: 0;
+}
+.panel-heading {
+  float: left;
+  width: 100%;
+}
+.panel-body {
+  padding: 0 $gap-5 $gap-5 $gap-5;
+
+  .nav-tabs {
+    margin: 0 (-$gap-5) $gap-5 (-$gap-5);
+    padding: 0 $gap-5;
+  }
+}
+.panel-body__no-margin {
+  margin-left: -$gap-5;
+  margin-right: -$gap-5;
+}
+.panel-title {
+  font-size: $gap-6;
+  line-height: 36px;
+}
+.panel-footer {
+  background-color: #fff;
+  border-top: 0;
+  @include border-bottom-radius(($panel-border-radius - 1));
+}
+.panel-body__col {
+  padding: $gap-5 0;
+}
+.panel-footer__col {
+  padding: 0 $gap-3 $gap-3 $gap-3;
+}
+.panel-footer__title {
+  margin-top: $gap-5;
+  margin-bottom: $gap-3;
+}
+.panel-default .panel-heading {
+  color: #212121;
+  border-color: transparent;
+  background-color: #FFEB3B;
+}
