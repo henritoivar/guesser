@@ -65,8 +65,12 @@ a.btn-link {
   min-height: $gap-10;
   background-color: #FFF9C4;
   border-radius: 0;
-  color: $brand-primary;
+  color: #FBC02D;
   font-size: $gap-8;
+  &:hover, &:active {
+    color: #FFF9C4;
+    background-color: #FBC02D;
+  }
 }
 
 // FLOATING ACTION BUTTON

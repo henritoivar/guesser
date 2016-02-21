@@ -5799,8 +5799,11 @@ a.btn-link {
   min-height: 72px;
   background-color: #FFF9C4;
   border-radius: 0;
-  color: #673AB7;
+  color: #FBC02D;
   font-size: 44px; }
+  .btn-choice:hover, .btn-choice:active {
+    color: #FFF9C4;
+    background-color: #FBC02D; }
 
 .btn--floating {
   position: absolute;
@@ -5854,6 +5857,17 @@ a.btn-link {
 
 .incorrect-answer:after {
   content: 'Nope!'; }
+
+.continue-container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: #FFF9C4;
+  padding: 16px; }
 
 .guesser-title {
   font-size: 72px;
@@ -6045,6 +6059,10 @@ h3, .h3 {
 
 html, body {
   height: 100%; }
+
+.float-fix {
+  float: left;
+  width: 100%; }
 
 body {
   background: linear-gradient(135deg, rgba(124, 77, 255, 0.16) 0%, #fff9c4 100%); }
