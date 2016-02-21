@@ -1,10 +1,13 @@
 @extends('app')
 
 @section('content')
-    <div class="container guesser">
+    <div class="container-fluid guesser">
         <div class="row">
-            <div class="col-xs-12">
+        		<div class="col-xs-12">
                 <h1 class="text-center guesser-title">Where is it?</h1>
+        		</div>
+        		<!-- image card -->
+            <div class="col-xs-5">
                 <!-- image container -->
                 <div class="panel panel-default panel-guesser relative">
                     <div class="panel-body no-padding">
@@ -16,6 +19,15 @@
                         @endforeach
                     </div>
                 </div>
+            </div>
+
+            <!-- map card -->
+            <div class="col-xs-7">
+            	<div class="panel panel-default">
+            		<div class="panel-body no-padding">
+            			maps go here
+            		</div>
+            	</div>
             </div>
         </div>
     </div>
