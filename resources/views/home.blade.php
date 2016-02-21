@@ -19,4 +19,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <!-- Our GMaps implementation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            initMap();
+        });
+
+        function initMap(){
+            var mapOptions = {
+                zoom: 13,
+                minZoom: 3,
+                streetViewControl: false,
+                zoomControl: false,
+                panControl: false
+            };
+
+            // Create map
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        }
+    </script>
 @endsection
