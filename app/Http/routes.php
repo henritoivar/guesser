@@ -27,7 +27,6 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('auth/login', 'AuthController@showLogin');
-    Route::get('auth/instagram', 'AuthController@instagramAuth');
     Route::get('home', 'GameController@home');
+    Route::get('test', 'GameController@test');
 });
