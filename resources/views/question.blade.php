@@ -11,11 +11,11 @@
                 <!-- image container -->
                 <div class="panel panel-default panel-guesser relative">
                     <div class="panel-body no-padding">
-                        <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}" class="img-responsive" src="{{ $correct['url_c'] }}" alt="">
+                        <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}" class="img-responsive lazy" src="{{ $correct['url_c'] }}" alt="">
                     </div>
-                    <div id="options" class="panel-footer">
+                    <div id="options" class="panel-footer text-right">
                         @foreach($options as $option)
-                            <button data-answer-id="{{ $option['id'] }}" class="btn btn-link display-b relative ripple submit-answer">{{ $option['letter'] }}</button>
+                            <button data-answer-id="{{ $option['id'] }}" class="btn btn-link btn-choice relative submit-answer">{{ $option['letter'] }}</button>
                         @endforeach
                     </div>
                     <div id="loader" style="display: none;">
@@ -41,10 +41,15 @@
         </div>
     </div>
 
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- Lazy images -->
+    <script src="{{ asset('lib/jquery_lazyload/jquery.lazyload.js') }}"></script>
 
     <script>
+        // load lazy images
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
+        });
+        
         $(document).ready(function () {
 
             // Guess answer

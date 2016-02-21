@@ -1,0 +1,22 @@
+{
+  "name": "guesser",
+  "description": "",
+  "main": "",
+  "authors": [
+    "MAREK-PC\\Marek <mareksmakosz@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/henritoivar/guesser",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "jquery": "^2.2.0"
+  }
+}

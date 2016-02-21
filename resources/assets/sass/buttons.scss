@@ -58,6 +58,16 @@ a.btn-link {
     }
 }
 
+.btn-choice {
+  min-width: $gap-10;
+  width: 25%;
+  float: left;
+  min-height: $gap-10;
+  background-color: $brand-primary;
+  border-radius: 0;
+  color: #fff;
+}
+
 // FLOATING ACTION BUTTON
 .btn--floating {
   position: absolute;
