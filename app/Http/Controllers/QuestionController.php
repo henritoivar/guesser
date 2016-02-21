@@ -19,6 +19,20 @@ class QuestionController extends Controller
         // Choose a correct answer
         $correct = $options->random();
 
+        // Assign a letter to each option
+        // Also remove unnesseccery clutter (possible cheats)
+        $letters = collect(range('A', 'Z'));
+        $options->transform(function ($item) use ($letters) {
+            $itemClean = array(
+                'letter' => $letters->shift(),
+                'id' => $item['id'],
+                'latitude' => $item['latitude'],
+                'longitude' => $item['longitude']
+            );
+
+            return $itemClean;
+        });
+
         // Remember the correct answer
         session()->put('correct', $correct);
 
@@ -34,7 +48,7 @@ class QuestionController extends Controller
         $listingUrl = 'https://api.flickr.com/services/rest';
         $params = array(
             'method' => 'flickr.photos.search',
-            'api_key' => '9b90f979966452f5c7ce6ab915022473',
+            'api_key' => config('flickr.key'),
             'lat' => $location['latitude'],
             'lon' => $location['longitude'],
             'has_geo' => 1,
@@ -43,7 +57,7 @@ class QuestionController extends Controller
             'sort' => 'interestingness-desc',
             'accuracy' => '16',
             'radius' => '15',
-            'extras' => 'geo,url_m,url_z,url_c,url_l',
+            'extras' => 'geo,url_c',
             //'tags' => 'cake',
             // 'tag_mode' => 'all'
         );
@@ -62,13 +76,6 @@ class QuestionController extends Controller
         });
 
         $options = $listingCollection->random(4);
-
-        // Assign a letter to each option
-        $letters = collect(range('A', 'Z'));
-        $options->transform(function ($item) use ($letters) {
-            $item['letter'] = $letters->shift();
-            return $item;
-        });
 
         return $options;
     }

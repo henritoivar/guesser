@@ -34,7 +34,7 @@ class AnswerController extends Controller
             $view = 'game-over';
 
             session()->put('score', 0);
-            session()->put('lives', 0);
+            session()->put('lives', config('lives.default'));
         }
 
         // Get photo full info
@@ -63,7 +63,7 @@ class AnswerController extends Controller
         $imageInfoUrl = 'https://api.flickr.com/services/rest';
         $params = array(
             'method' => 'flickr.photos.getInfo',
-            'api_key' => '9b90f979966452f5c7ce6ab915022473',
+            'api_key' => config('flickr.key'),
             'photo_id' => $photo['id'],
             'secret' => $photo['secret'],
             'format' => 'json',
@@ -82,7 +82,11 @@ class AnswerController extends Controller
     {
         // Add lives
         $lives = session()->get('lives');
-        session()->put('lives', ++$lives);
+
+        // Max lives reached?
+        if ($lives < config('lives.max')) {
+            session()->put('lives', ++$lives);
+        }
 
         // Add score
         $score = session()->get('score');
@@ -97,7 +101,7 @@ class AnswerController extends Controller
 
     private function isGameOver()
     {
-        return false;
+        return session()->get('lives') < 1;
     }
 
 }
