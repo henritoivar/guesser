@@ -5759,6 +5759,12 @@ button.close {
   border-radius: 2px;
   transition: 0.25s all ease-in-out; }
 
+.btn--lg {
+  padding: 16px 24px;
+  font-size: 32px;
+  line-height: 1.3333333;
+  border-radius: 2px; }
+
 .btn-link {
   font-weight: 500; }
   .btn-link:hover, .btn-link:focus {
@@ -5860,7 +5866,7 @@ a.btn-link {
   right: 0;
   display: block;
   background: linear-gradient(135deg, #7c4dff 0%, #fff9c4 100%);
-  padding: 112px 16px 16px 16px; }
+  padding: 16px; }
 
 .guesser-title {
   font-size: 72px;
@@ -6076,7 +6082,8 @@ h3, .h3 {
   color: rgba(255, 255, 255, 0.3); }
 
 html, body {
-  height: 100%; }
+  position: relative;
+  min-height: 100%; }
 
 .float-fix {
   float: left;

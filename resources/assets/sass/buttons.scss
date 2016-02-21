@@ -4,6 +4,12 @@
 	@include button-size(0, $gap-3, $font-size-base, 34px, $btn-border-radius-base);
   @include transition(0.25s all ease-in-out);
 }
+.btn--lg {
+    padding: $gap-5 $gap-6;
+    font-size: $gap-7;
+    line-height: 1.3333333;
+    border-radius: 2px;
+}
 .btn-link {
 	font-weight: $btn-font-weight;
   

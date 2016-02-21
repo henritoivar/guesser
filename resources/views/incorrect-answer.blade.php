@@ -5,8 +5,9 @@
 			<h2 class="guesser-subtitle">You lost a <i class="material-icons md-48">favorite</i>!</h2>
 
 			@include('answer-details')
-
-			<a class="btn btn-lg btn-primary btn--raised" href="{{ action('QuestionController@showQuestion') }}">Continue</a>
+			<div class="padding-tb--md">
+				<a class="btn btn--lg btn-primary btn--raised" href="{{ action('QuestionController@showQuestion') }}">Continue</a>
+			</div>
 		</div>
 	</div>
 </div>

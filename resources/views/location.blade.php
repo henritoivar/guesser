@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-xs-12 padding-tb--lg">
                 <h1 class="text-primary padding-tb--md">So you think you know your neighbourhood?</h1>
-                <h3>Let's find out!</h3>
+                <h3 class="guesser-subtitle">Let's find out!</h3>
             </div>
         </div>
         <div class="col-sm-8 col-sm-offset-2">

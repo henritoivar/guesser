@@ -1,4 +1,4 @@
-<div id="map-canvas" style="height: 600px"></div>
+<div id="map-canvas" style="height: 400px"></div>
 
 <!-- Google Maps API -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>

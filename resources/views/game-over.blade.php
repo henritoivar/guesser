@@ -5,8 +5,9 @@
 				<h2 class="guesser-subtitle">You scored: {{ $score }}!</h2>
 
 				@include('answer-details')
-
-				<a class="btn btn-link" href="{{ action('LocationController@showLocationChoice') }}">Try again</a>
+				<div class="padding-tb--md">
+					<a class="btn btn--lg btn-primary btn--raised" href="{{ action('LocationController@showLocationChoice') }}">Try again</a>
+				</div>
 		</div>
 	</div>
 </div>
