@@ -1,11 +1,3 @@
-@if($answerCorrect)
-    <h1>You are crazy smart!</h1>
-    <h2>Have a kitten!</h2>
-    <h2>You gained a <3</h2>
-@else
-    <h1>Dang!</h1>
-    <h2>You lost a <3</h2>
-@endif
 
 @if(isset($details['title']['_content']))
     <h3>This picture is titled <span class="success">"{{ $details['title']['_content'] }}"</span></h3>

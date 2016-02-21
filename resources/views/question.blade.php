@@ -3,19 +3,7 @@
 @section('content')
     <!-- result details -->
     <div id="continue-container" class="continue-container" style="display: none">
-        <div id="correct-answer-text" style="display: none;">
-            <h1>You are crazy smart!</h1>
-            <h2>Have a kitten!</h2>
-            <h2>You gained a <3</h2>
-        </div>
-        <div id="incorrect-answer-text" style="display: none">
-            <h1>Dang!</h1>
-            <h2>You lost a <3</h2>
-        </div>
-        <div id="answer-details">
 
-        </div>
-        <a class="btn btn-link" href="{{ action('QuestionController@showQuestion') }}">Continue</a>
     </div>
     
     <!-- main content -->
@@ -91,24 +79,19 @@
                         // Show that answer was correct
                         $('.panel-guesser').attr('answer-content', 'Correct!');
                         $('.panel-guesser').addClass('correct-answer');
-
-                        // Show correct answer text
-                        $('#correct-answer-text').show();
                     } else {
                         // Show that answer was incorrect
                         $('.panel-guesser').attr('answer-content', 'Nope!');
                         $('.panel-guesser').addClass('incorrect-answer');
-
-                        // Show incorrect answer text
-                        $('#incorrect-answer-text').show();
                     }
 
                     // Show continue button
                     setTimeout(function() {
-                        // $('#continue-container').fadeIn(400);
+                        $('#continue-container').fadeIn(400);
                     }, 2000);
 
                     // Add answer details
+                    $('.continue-container').html(response.detailsHtml);
 
                 });
             });

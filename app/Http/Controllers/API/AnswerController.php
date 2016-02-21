@@ -18,16 +18,23 @@ class AnswerController extends Controller
         if ($correct['id'] === $request->get('answerId')) {
             $this->addLives();
             $answerCorrect = true;
+            $view = 'correct-answer';
             $message = 'Correct answer!';
         }else{
             $this->decreaseLives();
             $answerCorrect = false;
             $message = 'Wrong answer!';
+            $view = 'incorrect-answer';
         }
+
+        $score = session()->get('score');
 
         // Game over ?
         if ($this->isGameOver()) {
+            $view = 'game-over';
 
+            session()->put('score', 0);
+            session()->put('lives', 0);
         }
 
         // Get photo full info
@@ -45,7 +52,7 @@ class AnswerController extends Controller
         }
 
         // Render details html
-        $detailsHtml = view()->make('answer-details', compact('details', 'answerCorrect'))->render();
+        $detailsHtml = view()->make($view, compact('details', 'answerCorrect', 'score'))->render();
 
         return response()->json(['answerCorrect' => $answerCorrect, 'message' => $message, 'detailsHtml' => $detailsHtml]);
     }
