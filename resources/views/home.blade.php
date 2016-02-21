@@ -11,11 +11,11 @@
                 <!-- image container -->
                 <div class="panel panel-default panel-guesser relative">
                     <div class="panel-body no-padding">
-                        <img class="img-responsive" src="{{ $correct['url_z'] }}" alt="">
+                        <img class="img-responsive lazy" src="{{ $correct['url_z'] }}" alt="">
                     </div>
-                    <div class="panel-footer">
+                    <div class="panel-footer text-right">
                         @foreach($options as $option)
-                            <button class="btn btn-link display-b relative ripple">{{ $option['letter'] }}</button>
+                            <button class="btn btn-link btn-choice relative">{{ $option['letter'] }}</button>
                         @endforeach
                     </div>
                 </div>
@@ -32,12 +32,21 @@
         </div>
     </div>
 
+    <!-- jQuery -->
+    <script src="{{ asset('lib/jquery/dist/jquery.js') }}"></script>
+    <!-- Lazy images -->
+    <script src="{{ asset('lib/jquery_lazyload/jquery.lazyload.js') }}"></script>
+
     <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
     <!-- Our GMaps implementation -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             initMap();
+            
+            $("img.lazy").lazyload({
+                effect : "fadeIn"
+            });
         });
 
         function initMap(){
