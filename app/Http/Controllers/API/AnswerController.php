@@ -75,17 +75,17 @@ class AnswerController extends Controller
     {
         // Add lives
         $lives = session()->get('lives');
-        session()->put('lives', $lives++);
+        session()->put('lives', ++$lives);
 
         // Add score
         $score = session()->get('score');
-        session()->put('score', $score++);
+        session()->put('score', ++$score);
     }
 
     private function decreaseLives()
     {
         $lives = session()->get('lives');
-        session()->put('lives', $lives--);
+        session()->put('lives', --$lives);
     }
 
     private function isGameOver()
