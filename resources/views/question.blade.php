@@ -41,9 +41,6 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="{{ asset('lib/jquery/dist/jquery.js') }}"></script>
-
     <!-- Lazy images -->
     <script src="{{ asset('lib/jquery_lazyload/jquery.lazyload.js') }}"></script>
 
