@@ -8,16 +8,25 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use GuzzleHttp;
 use Auth;
+use Session;
 
 class GameController extends Controller
 {
     public function home()
     {
+        // Get our options
+        $options = $this->getOptions();
 
-        return view('home');
+        // Choose a correct answer
+        $correct = $options->random();
+
+        // Remember the correct answer
+        Session::put('correct', $correct);
+
+        return view('home')->with(compact('options', 'correct'));
     }
 
-    public function test(){
+    private function getOptions(){
 
         // Get images
         $listingUrl = 'https://api.flickr.com/services/rest';
@@ -45,9 +54,16 @@ class GameController extends Controller
         // Get 4 images from the result
         $listingCollection = collect($listingResponse['photos']['photo']);
 
-        $answers = $listingCollection->random(4);
+        $options = $listingCollection->random(4);
 
-        return $answers;
+        // Assign a letter to each option
+        $letters = collect(range('A', 'Z'));
+        $options->transform(function ($item) use ($letters) {
+            $item['letter'] = $letters->shift();
+            return $item;
+        });
+
+        return $options;
     }
 
     private function getPhotoInfo($photo)

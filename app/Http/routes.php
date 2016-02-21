@@ -28,5 +28,5 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('home', 'GameController@home');
-    Route::get('test', 'GameController@test');
+    Route::get('question', 'GameController@getQuestion');
 });
