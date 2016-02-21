@@ -5875,6 +5875,15 @@ a.btn-link {
   margin-top: 72px;
   margin-bottom: 72px; }
 
+.points {
+  position: absolute;
+  top: 72px;
+  right: 15px; }
+  .points h3 {
+    color: #673AB7; }
+  .points i {
+    color: #FBC02D; }
+
 .ripple:before {
   content: ' ';
   position: absolute;
