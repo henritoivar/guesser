@@ -17,7 +17,8 @@
     color: $brand-primary;
     font-size: $gap-8;
     opacity: 0;
-    animation: roll-in 1s forwards;
+    // animation: roll-in 1s forwards;
+    animation: roll-in 1s 2s 2 alternate backwards;
     animation-delay: 0.5s;
 	}
 }
@@ -41,13 +42,19 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: ripple-animation 1s forwards;
+    opacity: 0;
+    // animation: ripple-animation 1s forwards;
+    animation: ripple-animation 1s 2 alternate backwards;
 	}
 }
 @keyframes ripple-animation {
     from {
       transform: scale(1);
       opacity: 0.4;
+    }
+    50% {
+      transform: scale(100);
+      opacity: 1;
     }
     to {
       transform: scale(100);
