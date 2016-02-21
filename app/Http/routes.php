@@ -23,6 +23,9 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', 'GameController@showQuestion');
-    Route::post('/guess', 'GameController@guess');
+    Route::get('/', 'QuestionController@showQuestion');
+});
+
+Route::group(['prefix' => 'api/v1', 'middleware' => ['api']], function () {
+    Route::post('/guess', 'API\AnswerController@guess');
 });

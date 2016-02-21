@@ -8,9 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use GuzzleHttp;
 use Auth;
-use Session;
 
-class GameController extends Controller
+class QuestionController extends Controller
 {
     public function showQuestion()
     {
@@ -21,20 +20,9 @@ class GameController extends Controller
         $correct = $options->random();
 
         // Remember the correct answer
-        Session::put('correct', $correct);
+        session()->put('correct', $correct);
 
         return view('question')->with(compact('options', 'correct'));
-    }
-
-    public function guess(Request $request){
-        // Check if answer is correct
-        $correct = Session::get('correct');
-
-        if ($correct['id'] === $request->get('answer')) {
-            return response(['correctAnswer' => true, 'message' => 'Correct answer!'])->json();
-        }
-
-        return response(['correctAnswer' => false, 'message' => 'Wrong answer!'])->json();
     }
 
     private function getOptions(){

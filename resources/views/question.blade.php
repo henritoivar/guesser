@@ -15,7 +15,7 @@
                     </div>
                     <div class="panel-footer">
                         @foreach($options as $option)
-                            <button class="btn btn-link display-b relative ripple">{{ $option['letter'] }}</button>
+                            <button data-answer-id="{{ $option['id'] }}" class="btn btn-link display-b relative ripple submit-answer">{{ $option['letter'] }}</button>
                         @endforeach
                     </div>
                 </div>
@@ -25,76 +25,33 @@
             <div class="col-xs-7">
                 <div class="panel panel-default">
                     <div class="panel-body no-padding">
-                        <div id="map-canvas" style="height: 600px"></div>
+                        @include('map')
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
-    <!-- Our GMaps implementation -->
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
     <script>
-        google.maps.event.addDomListener(window, "load", initMap);
+        $(document).ready(function () {
 
-        function initMap() {
-            // Random latLng, broke otherwise
-            var latlng = new google.maps.LatLng(-34.397, 150.644);
-            var mapOptions = {
-                zoom: 13,
-                center: latlng,
-                minZoom: 3,
-                streetViewControl: false,
-                //zoomControl: false,
-                panControl: false
-            };
+            // Guess answer
+            $('.submit-answer').click(function () {
+                var answerId = $(this).data('answer-id');
+                guess(answerId, function (response) {
+                    console.log(response);
+                });
+            });
+        });
 
-            var locations = {!! $options->toJson() !!};
-
-            console.log(locations);
-
-            // Create map
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-            // Add markers
-            var markers = createMarkers(locations, map);
-
-            // Fit map to markers
-            fitMarkersToViewBounds(markers, map);
+        function guess(answerId, callback){
+            $.post('{{ action('GameController@guess') }}', {
+                answerId: answerId
+            }, callback);
         }
-
-        function createMarkers(locations, map) {
-            var markers = [];
-
-            for (var prop in locations) {
-                if (locations.hasOwnProperty(prop)) {
-                    var location = locations[prop];
-                    // Create marker
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        icon: {
-                            url: 'http://maps.google.com/mapfiles/marker' + location.letter + '.png'
-                        },
-                        position: new google.maps.LatLng(location.latitude, location.longitude)
-                    });
-
-                    markers.push(marker);
-                }
-            }
-
-            return markers;
-        }
-
-        function fitMarkersToViewBounds(markers, map) {
-            var bounds = new google.maps.LatLngBounds();
-
-            for (var i = 0; i < markers.length; i++) {
-                bounds.extend(markers[i].getPosition());
-            }
-
-            map.fitBounds(bounds);
-        }
-
     </script>
+
 @endsection
