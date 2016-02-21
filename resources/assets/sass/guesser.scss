@@ -18,8 +18,7 @@
     font-size: $gap-8;
     opacity: 0;
     // animation: roll-in 1s forwards;
-    animation: roll-in 1s 2s 2 alternate backwards;
-    animation-delay: 0.5s;
+    animation: roll-in 1.5s 2 alternate backwards;
 	}
 }
 .guesser-title {
@@ -44,7 +43,7 @@
     height: 50px;
     opacity: 0;
     // animation: ripple-animation 1s forwards;
-    animation: ripple-animation 1s 2 alternate backwards;
+    animation: ripple-animation 1.6s 2 alternate backwards;
 	}
 }
 @keyframes ripple-animation {
@@ -52,7 +51,7 @@
       transform: scale(1);
       opacity: 0.4;
     }
-    50% {
+    33% {
       transform: scale(100);
       opacity: 1;
     }
