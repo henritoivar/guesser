@@ -25,7 +25,7 @@ class QuestionController extends Controller
         return view('question')->with(compact('options', 'correct'));
     }
 
-    public function getOptions(){
+    private function getOptions(){
 
         // Get location
         $location = session()->get('location');
@@ -71,31 +71,6 @@ class QuestionController extends Controller
         });
 
         return $options;
-    }
-
-    public function test(){
-        return $this->getPhotoInfo(['id' => '6009545279', 'secret' => '146a08bdc2']);
-    }
-
-    private function getPhotoInfo($photo)
-    {
-
-        $imageInfoUrl = 'https://api.flickr.com/services/rest';
-        $params = array(
-            'method' => 'flickr.photos.getInfo',
-            'api_key' => '9b90f979966452f5c7ce6ab915022473',
-            'photo_id' => $photo['id'],
-            'secret' => $photo['secret'],
-            'format' => 'json',
-            'nojsoncallback' => 1
-        );
-
-        $client = new GuzzleHttp\Client();
-
-        $infoResponseRaw = $client->get($imageInfoUrl, ['query' => $params]);
-        $infoResponse = json_decode($infoResponseRaw->getBody(), true);
-
-        return $infoResponse;
     }
 
 }
