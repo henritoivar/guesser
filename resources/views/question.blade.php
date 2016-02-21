@@ -3,7 +3,7 @@
 @section('content')
     <div class="container guesser">
         <div class="row">
-            <div class="col-xs-12 text-center">
+            <div class="col-xs-12">
                 <h1 class="guesser-title">Where is it?</h1>
                 <div class="points">
                     <h3><strong>3</strong> <i class="material-icons md-48">favorite</i></h3>
