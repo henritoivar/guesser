@@ -73,8 +73,6 @@
                 var answerId = $(this).data('answer-id');
                 guess(answerId, function (response) {
 
-                    console.log(response);
-
                     // Hide loader
                     $('#loader').hide();
 

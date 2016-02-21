@@ -34,7 +34,7 @@ class QuestionController extends Controller
         $listingUrl = 'https://api.flickr.com/services/rest';
         $params = array(
             'method' => 'flickr.photos.search',
-            'api_key' => '9b90f979966452f5c7ce6ab915022473',
+            'api_key' => config('flickr.key'),
             'lat' => $location['latitude'],
             'lon' => $location['longitude'],
             'has_geo' => 1,

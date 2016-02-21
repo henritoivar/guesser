@@ -26,7 +26,7 @@
 
 
     <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoIbvYern1o37STgRkG4nCcNCrN7o0Kcc&libraries=places"></script>
+            src="https://maps.googleapis.com/maps/api/js?key={{ config('google.key') }}&libraries=places"></script>
 
     <script>
         (function () {

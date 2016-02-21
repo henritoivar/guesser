@@ -26,7 +26,7 @@ class LocationController extends Controller
         // Set lives and score
         $lives = session()->get('lives');
         if (!$lives) {
-            session()->put('lives', 3);
+            session()->put('lives', config('lives.default'));
             session()->put('score', 0);
         }
 
