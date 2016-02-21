@@ -13,10 +13,19 @@
                     <div class="panel-body no-padding">
                         <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}" class="img-responsive" src="{{ $correct['url_c'] }}" alt="">
                     </div>
-                    <div class="panel-footer">
+                    <div id="options" class="panel-footer">
                         @foreach($options as $option)
                             <button data-answer-id="{{ $option['id'] }}" class="btn btn-link display-b relative ripple submit-answer">{{ $option['letter'] }}</button>
                         @endforeach
+                    </div>
+                    <div id="loader" style="display: none;">
+                        loading ...
+                    </div>
+                    <div id="answer-details" style="display: none;">
+                        this picture was taken with a banana!
+                    </div>
+                    <div id="continue-container" style="display: none">
+                        <a href="{{ action('QuestionController@showQuestion') }}">Continue</a>
                     </div>
                 </div>
             </div>
@@ -40,19 +49,32 @@
 
             // Guess answer
             $('.submit-answer').click(function () {
+
+                // Show loader
+                $('#loader').show();
+
                 var answerId = $(this).data('answer-id');
                 guess(answerId, function (response) {
+
+                    // Hide loader
+                    $('#loader').hide();
+
+                    // Hide the options
+                    $('#options').hide();
+
                     if(response.correctAnswer === true) {
                         // Show that answer was correct
-                        console.log('correct!')
+                        $('.panel-guesser').addClass('correct-answer');
+
                         // Show answer details
+                        $('#answer-details').show();
                     }else{
                         // Show that answer was incorrect
-                        console.log('wrong!');
+                        $('.panel-guesser').addClass('incorrect-answer');
                     }
 
-                    // Reload the page/ get next guess
-                    document.location.reload();
+                    // Show continue button
+                    $('#continue-container').show();
                 });
             });
         });
