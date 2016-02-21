@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <div class="container guesser">
+    <div class="container-fluid guesser">
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="text-center guesser-title">Where is it?</h1>
@@ -13,10 +13,19 @@
                     <div class="panel-body no-padding">
                         <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}" class="img-responsive lazy" src="{{ $correct['url_c'] }}" alt="">
                     </div>
-                    <div class="panel-footer text-right no-padding">
+                    <div id="options" class="panel-footer no-padding text-right">
                         @foreach($options as $option)
                             <button data-answer-id="{{ $option['id'] }}" class="btn btn-link btn-choice relative submit-answer">{{ $option['letter'] }}</button>
                         @endforeach
+                    </div>
+                    <div id="loader" style="display: none;">
+                        loading ...
+                    </div>
+                    <div id="answer-details" style="display: none;">
+                        this picture was taken with a banana!
+                    </div>
+                    <div id="continue-container" style="display: none">
+                        <a href="{{ action('QuestionController@showQuestion') }}">Continue</a>
                     </div>
                 </div>
             </div>
@@ -32,8 +41,6 @@
         </div>
     </div>
 
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- Lazy images -->
     <script src="{{ asset('lib/jquery_lazyload/jquery.lazyload.js') }}"></script>
 
@@ -42,24 +49,37 @@
         $("img.lazy").lazyload({
             effect : "fadeIn"
         });
-
+        
         $(document).ready(function () {
 
             // Guess answer
             $('.submit-answer').click(function () {
+
+                // Show loader
+                $('#loader').show();
+
                 var answerId = $(this).data('answer-id');
                 guess(answerId, function (response) {
+
+                    // Hide loader
+                    $('#loader').hide();
+
+                    // Hide the options
+                    $('#options').hide();
+
                     if(response.correctAnswer === true) {
                         // Show that answer was correct
-                        console.log('correct!')
+                        $('.panel-guesser').addClass('correct-answer');
+
                         // Show answer details
+                        $('#answer-details').show();
                     }else{
                         // Show that answer was incorrect
-                        console.log('wrong!');
+                        $('.panel-guesser').addClass('incorrect-answer');
                     }
 
-                    // Reload the page/ get next guess
-                    document.location.reload();
+                    // Show continue button
+                    $('#continue-container').show();
                 });
             });
         });
