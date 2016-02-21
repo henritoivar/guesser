@@ -17,10 +17,18 @@ class LocationController extends Controller
 
     public function setLocation(Request $request)
     {
+        // Set location
         session()->set('location', array(
             'latitude' => $request->get('latitude'),
             'longitude' => $request->get('longitude')
         ));
+
+        // Set lives and score
+        $lives = session()->get('lives');
+        if (!$lives) {
+            session()->put('lives', 3);
+            session()->put('score', 0);
+        }
 
         return redirect()->action('QuestionController@showQuestion');
     }
