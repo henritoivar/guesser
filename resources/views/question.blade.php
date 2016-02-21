@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <div class="container-fluid guesser">
+    <div class="container guesser">
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="text-center guesser-title">Where is it?</h1>
@@ -41,6 +41,9 @@
         </div>
     </div>
 
+    <!-- jQuery -->
+    <script src="{{ asset('lib/jquery/dist/jquery.js') }}"></script>
+
     <!-- Lazy images -->
     <script src="{{ asset('lib/jquery_lazyload/jquery.lazyload.js') }}"></script>
 
@@ -51,9 +54,9 @@
         });
         
         $(document).ready(function () {
-
             // Guess answer
             $('.submit-answer').click(function () {
+                $(this).toggleClass("ripple");
 
                 // Show loader
                 $('#loader').show();
@@ -65,7 +68,7 @@
                     $('#loader').hide();
 
                     // Hide the options
-                    $('#options').hide();
+                    // $('#options').hide();
 
                     if(response.correctAnswer === true) {
                         // Show that answer was correct

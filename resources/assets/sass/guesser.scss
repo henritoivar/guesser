@@ -2,7 +2,7 @@
 .panel-guesser {
 	overflow: hidden;
 	&:after {
-		content: 'Correct!';
+	content: ' ';
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -17,10 +17,25 @@
     color: $brand-primary;
     font-size: $gap-8;
     opacity: 0;
-    // animation: roll-in 1s forwards;
-    animation: roll-in 1.5s 2 alternate backwards;
-	}
+    }
 }
+.correct-answer,
+.incorrect-answer {
+    &:after {
+        animation: roll-in 1.5s 2 alternate backwards;
+    }
+}
+.correct-answer {
+    &:after {
+        content: 'Correct!';
+    }
+}
+.incorrect-answer {
+    &:after {
+        content: 'Nope!';
+    }
+}
+
 .guesser-title {
 	font-size: $gap-10;
 	color: $brand-purple;

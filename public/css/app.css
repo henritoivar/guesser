@@ -5828,7 +5828,7 @@ a.btn-link {
 .panel-guesser {
   overflow: hidden; }
   .panel-guesser:after {
-    content: 'Correct!';
+    content: ' ';
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -5842,9 +5842,18 @@ a.btn-link {
     margin-left: -100px;
     color: #673AB7;
     font-size: 44px;
-    opacity: 0;
-    -webkit-animation: roll-in 1.5s 2 alternate backwards;
-    animation: roll-in 1.5s 2 alternate backwards; }
+    opacity: 0; }
+
+.correct-answer:after,
+.incorrect-answer:after {
+  -webkit-animation: roll-in 1.5s 2 alternate backwards;
+  animation: roll-in 1.5s 2 alternate backwards; }
+
+.correct-answer:after {
+  content: 'Correct!'; }
+
+.incorrect-answer:after {
+  content: 'Nope!'; }
 
 .guesser-title {
   font-size: 72px;
