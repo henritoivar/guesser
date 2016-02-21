@@ -13,19 +13,16 @@
                     <div class="panel-body no-padding">
                         <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}" class="img-responsive lazy" src="{{ $correct['url_c'] }}" alt="">
                     </div>
-                    <div id="options" class="panel-footer no-padding text-right">
+                    <div id="options" class="panel-footer no-padding relative float-fix">
+                        <div id="continue-container" class="continue-container" style="display: none">
+                            <div id="answer-details" style="display: none;">
+                                this picture was taken with a banana!
+                            </div>
+                            <a class="btn btn-link" href="{{ action('QuestionController@showQuestion') }}">Continue</a>
+                        </div>
                         @foreach($options as $option)
                             <button data-answer-id="{{ $option['id'] }}" class="btn btn-link btn-choice relative submit-answer">{{ $option['letter'] }}</button>
                         @endforeach
-                    </div>
-                    <div id="loader" style="display: none;">
-                        loading ...
-                    </div>
-                    <div id="answer-details" style="display: none;">
-                        this picture was taken with a banana!
-                    </div>
-                    <div id="continue-container" style="display: none">
-                        <a href="{{ action('QuestionController@showQuestion') }}">Continue</a>
                     </div>
                 </div>
             </div>
@@ -38,6 +35,10 @@
                     </div>
                 </div>
             </div>
+
+                    <div id="loader" style="display: none;">
+                        loading ...
+                    </div>
         </div>
     </div>
 
@@ -56,7 +57,7 @@
         $(document).ready(function () {
             // Guess answer
             $('.submit-answer').click(function () {
-                $(this).toggleClass("ripple");
+                $(this).addClass("ripple");
 
                 // Show loader
                 $('#loader').show();
@@ -82,7 +83,7 @@
                     }
 
                     // Show continue button
-                    $('#continue-container').show();
+                    $('#continue-container').fadeIn(400);
                 });
             });
         });
