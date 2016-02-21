@@ -72,12 +72,15 @@
         $(document).ready(function () {
             // Guess answer
             $('.submit-answer').click(function () {
+                // disable the answer buttons
+                $(this).siblings().prop('disabled', true);
+
                 var submitAnswerBtn = $(this);
                 
                 // ripple forwards
                 submitAnswerBtn.addClass("ripple-forwards");
                 // Set loading text
-                $('.panel-guesser').attr('answer-content', 'Aaand..');
+                $('.panel-guesser').attr('answer-content', 'Aaand..').addClass('loading-answer');
 
                 var answerId = $(this).data('answer-id');
                 guess(answerId, function (response) {
