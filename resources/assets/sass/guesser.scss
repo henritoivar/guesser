@@ -19,8 +19,7 @@
     opacity: 0;
     }
 }
-.correct-answer,
-.incorrect-answer {
+.loading-answer {
     &:after {
         animation: roll-in 1.5s forwards;
     }

@@ -5847,8 +5847,7 @@ a.btn-link {
     font-size: 44px;
     opacity: 0; }
 
-.correct-answer:after,
-.incorrect-answer:after {
+.loading-answer:after {
   -webkit-animation: roll-in 1.5s forwards;
   animation: roll-in 1.5s forwards; }
 
