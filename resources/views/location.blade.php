@@ -17,7 +17,7 @@
                     <input id="googleAutocomplete" class="form-control" placeholder="Type to find your location..."
                            type="text">
                 <span class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">Go!</button>
+                    <button class="btn btn-primary" type="submit">Start</button>
                 </span>
                 </div><!-- /input-group -->
             </form>
