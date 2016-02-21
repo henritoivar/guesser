@@ -88,7 +88,7 @@
                     // Show continue button
                     $('#continue-container').fadeIn(400);
 
-                    if (response.correctAnswer === true) {
+                    if (response.answerCorrect === true) {
                         // Show that answer was correct
                         $('.panel-guesser').addClass('correct-answer');
 
