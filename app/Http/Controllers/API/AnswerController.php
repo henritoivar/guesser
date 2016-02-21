@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -14,17 +15,32 @@ class AnswerController extends Controller
         // Check if answer is correct
         $correct = session()->get('correct');
 
-        // Get photo full info
-        $details = $this->getPhotoInfo($correct);
-
-        // Render details html
-        $detailsHtml = view()->make('answer-details', ['details' => $details['photo']])->render();
-
         if ($correct['id'] === $request->get('answerId')) {
-            return response()->json(['correctAnswer' => true, 'message' => 'Correct answer!', 'detailsHtml' => $detailsHtml]);
+            $answerCorrect = true;
+            $message = 'Correct answer!';
+        }else{
+            $answerCorrect = false;
+            $message = 'Wrong answer!';
         }
 
-        return response()->json(['correctAnswer' => false, 'message' => 'Wrong answer!', 'detailsHtml' => $detailsHtml]);
+        // Get photo full info
+        $details = $this->getPhotoInfo($correct);
+        $details = $details['photo'];
+
+        // Get icon url
+        if (isset($details['owner']['iconfarm'])) {
+            $details['owner']['iconUrl'] = 'http://farm' . $details['owner']['iconfarm'] . '.staticflickr.com/' . $details['owner']['iconserver'] . '/buddyicons/' . $details['owner']['nsid'] . '.jpg';
+        }
+
+        // Get how many days ago it was taken
+        if (isset($details['dates']['taken'])) {
+            $details['dates']['takenDate'] = Carbon::createFromFormat('Y-m-d H:i:s', $details['dates']['taken']);
+        }
+
+        // Render details html
+        $detailsHtml = view()->make('answer-details', compact('details', 'answerCorrect'))->render();
+
+        return response()->json(['answerCorrect' => $answerCorrect, 'message' => $message, 'detailsHtml' => $detailsHtml]);
     }
 
     private function getPhotoInfo($photo)

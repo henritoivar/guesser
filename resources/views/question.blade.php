@@ -87,7 +87,7 @@
                     // Hide loader
                     $('#loader').hide();
 
-                    if (response.correctAnswer === true) {
+                    if (response.answerCorrect === true) {
                         // Show that answer was correct
                         $('.panel-guesser').attr('answer-content', 'Correct!');
                         $('.panel-guesser').addClass('correct-answer');
