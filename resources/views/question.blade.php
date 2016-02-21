@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- result details -->
-    <div id="continue-container" class="continue-container" style="display: none">
+    <div id="continue-container" class="continue-container text-center" style="display: none">
 
     </div>
     

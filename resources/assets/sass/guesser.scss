@@ -42,8 +42,8 @@
     left: 0;
     right: 0;
     display: block;
-    background-color: #FFF9C4;
-    padding: $gap-5;
+    background: $gradient-full;
+    padding: $gap-11 $gap-5 $gap-5 $gap-5;
 }
 .guesser-title {
 	font-size: $gap-10;
@@ -51,10 +51,20 @@
 	margin-top: $gap-10;
 	margin-bottom: $gap-10;
 }
+.guesser-subtitle {
+    font-size: $gap-8;
+    color: $gray-secondary;
+    margin-top: $gap-8;
+    margin-bottom: $gap-8;   
+    i {
+        color: #FBC02D;
+    }
+}
 .points {
     position: absolute;
     top: $gap-10;
     right: 15px;
+    text-align: right;
     h3 {
         color: $brand-primary;
     }

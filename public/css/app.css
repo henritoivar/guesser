@@ -5859,8 +5859,8 @@ a.btn-link {
   left: 0;
   right: 0;
   display: block;
-  background-color: #FFF9C4;
-  padding: 16px; }
+  background: linear-gradient(135deg, #7c4dff 0%, #fff9c4 100%);
+  padding: 112px 16px 16px 16px; }
 
 .guesser-title {
   font-size: 72px;
@@ -5868,10 +5868,19 @@ a.btn-link {
   margin-top: 72px;
   margin-bottom: 72px; }
 
+.guesser-subtitle {
+  font-size: 44px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: 44px;
+  margin-bottom: 44px; }
+  .guesser-subtitle i {
+    color: #FBC02D; }
+
 .points {
   position: absolute;
   top: 72px;
-  right: 15px; }
+  right: 15px;
+  text-align: right; }
   .points h3 {
     color: #673AB7; }
   .points i {
