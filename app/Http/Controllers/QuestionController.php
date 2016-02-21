@@ -25,7 +25,7 @@ class QuestionController extends Controller
         return view('question')->with(compact('options', 'correct'));
     }
 
-    private function getOptions(){
+    public function getOptions(){
 
         // Get images
         $listingUrl = 'https://api.flickr.com/services/rest';
@@ -53,6 +53,11 @@ class QuestionController extends Controller
         // Get 4 images from the result
         $listingCollection = collect($listingResponse['photos']['photo']);
 
+        // Filter out images without big image
+        $listingCollection = $listingCollection->filter(function ($item) {
+            return isset($item['url_c']);
+        });
+
         $options = $listingCollection->random(4);
 
         // Assign a letter to each option
@@ -63,6 +68,10 @@ class QuestionController extends Controller
         });
 
         return $options;
+    }
+
+    public function test(){
+        return $this->getPhotoInfo(['id' => '6009545279', 'secret' => '146a08bdc2']);
     }
 
     private function getPhotoInfo($photo)

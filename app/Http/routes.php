@@ -28,4 +28,6 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['prefix' => 'api/v1', 'middleware' => ['api']], function () {
     Route::post('/guess', 'API\AnswerController@guess');
+    Route::get('/options', 'QuestionController@getOptions');
+    Route::get('/test', 'QuestionController@test');
 });

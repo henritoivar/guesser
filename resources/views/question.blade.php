@@ -11,7 +11,7 @@
                 <!-- image container -->
                 <div class="panel panel-default panel-guesser relative">
                     <div class="panel-body no-padding">
-                        <img class="img-responsive" src="{{ $correct['url_z'] }}" alt="">
+                        <img class="img-responsive" src="{{ $correct['url_c'] }}" alt="">
                     </div>
                     <div class="panel-footer">
                         @foreach($options as $option)
@@ -42,13 +42,23 @@
             $('.submit-answer').click(function () {
                 var answerId = $(this).data('answer-id');
                 guess(answerId, function (response) {
-                    console.log(response);
+                    if(response.correctAnswer === true) {
+                        // Show that answer was correct
+                        console.log('correct!')
+                        // Show answer details
+                    }else{
+                        // Show that answer was incorrect
+                        console.log('wrong!');
+                    }
+
+                    // Reload the page/ get next guess
+                    document.location.reload();
                 });
             });
         });
 
         function guess(answerId, callback){
-            $.post('{{ action('GameController@guess') }}', {
+            $.post('{{ action('API\AnswerController@guess') }}', {
                 answerId: answerId
             }, callback);
         }
