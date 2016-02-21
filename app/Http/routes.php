@@ -23,7 +23,9 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', 'QuestionController@showQuestion');
+    Route::get('/question', 'QuestionController@showQuestion');
+    Route::get('/', 'LocationController@showLocationChoice');
+    Route::post('/', 'LocationController@setLocation');
 });
 
 Route::group(['prefix' => 'api/v1', 'middleware' => ['api']], function () {
