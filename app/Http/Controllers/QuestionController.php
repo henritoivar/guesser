@@ -8,11 +8,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use GuzzleHttp;
 use Auth;
-use Session;
 
-class GameController extends Controller
+class QuestionController extends Controller
 {
-    public function home()
+    public function showQuestion()
     {
         // Get our options
         $options = $this->getOptions();
@@ -21,20 +20,20 @@ class GameController extends Controller
         $correct = $options->random();
 
         // Remember the correct answer
-        Session::put('correct', $correct);
+        session()->put('correct', $correct);
 
-        return view('home')->with(compact('options', 'correct'));
+        return view('question')->with(compact('options', 'correct'));
     }
 
-    private function getOptions(){
+    public function getOptions(){
 
         // Get images
         $listingUrl = 'https://api.flickr.com/services/rest';
         $params = array(
             'method' => 'flickr.photos.search',
             'api_key' => '9b90f979966452f5c7ce6ab915022473',
-            'lat' => '37.7925891',  /*'59.4427685',*/
-            'lon' => '-122.4071576', /*'24.731148',*/
+            'lat' => /*'37.7925891',*/  '59.4427685',
+            'lon' => /*'-122.4071576',*/ '24.731148',
             'has_geo' => 1,
             'format' => 'json',
             'nojsoncallback' => 1,
@@ -54,6 +53,11 @@ class GameController extends Controller
         // Get 4 images from the result
         $listingCollection = collect($listingResponse['photos']['photo']);
 
+        // Filter out images without big image
+        $listingCollection = $listingCollection->filter(function ($item) {
+            return isset($item['url_c']);
+        });
+
         $options = $listingCollection->random(4);
 
         // Assign a letter to each option
@@ -64,6 +68,10 @@ class GameController extends Controller
         });
 
         return $options;
+    }
+
+    public function test(){
+        return $this->getPhotoInfo(['id' => '6009545279', 'secret' => '146a08bdc2']);
     }
 
     private function getPhotoInfo($photo)
