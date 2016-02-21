@@ -2,20 +2,26 @@
 
 @section('content')
     <div class="container text-center">
-        <h1>So you think you know the neighbourhood?</h1>
-        <h2>Choose your location and give it a try!</h2>
-        <form action="{{ action('LocationController@setLocation') }}" method="post">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="hidden" name="latitude">
-            <input type="hidden" name="longitude">
-            <div class="input-group input-group-lg">
-                <input id="googleAutocomplete" class="form-control" placeholder="Type to find your location..."
-                       type="text">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">Go!</button>
-            </span>
-            </div><!-- /input-group -->
-        </form>
+        <div class="row">
+            <div class="col-xs-12 padding-tb--lg">
+                <h1 class="text-primary padding-tb--md">So you think you know your neighbourhood?</h1>
+                <h3>Let's find out!</h3>
+            </div>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <form action="{{ action('LocationController@setLocation') }}" method="post">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="latitude">
+                <input type="hidden" name="longitude">
+                <div class="input-group input-group-lg">
+                    <input id="googleAutocomplete" class="form-control" placeholder="Type to find your location..."
+                           type="text">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Go!</button>
+                </span>
+                </div><!-- /input-group -->
+            </form>
+        </div>
     </div>
 
 
