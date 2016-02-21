@@ -16,11 +16,18 @@ class AnswerController extends Controller
         $correct = session()->get('correct');
 
         if ($correct['id'] === $request->get('answerId')) {
+            $this->addLives();
             $answerCorrect = true;
             $message = 'Correct answer!';
         }else{
+            $this->decreaseLives();
             $answerCorrect = false;
             $message = 'Wrong answer!';
+        }
+
+        // Game over ?
+        if ($this->isGameOver()) {
+
         }
 
         // Get photo full info
@@ -62,6 +69,28 @@ class AnswerController extends Controller
         $infoResponse = json_decode($infoResponseRaw->getBody(), true);
 
         return $infoResponse;
+    }
+
+    private function addLives()
+    {
+        // Add lives
+        $lives = session()->get('lives');
+        session()->put('lives', ++$lives);
+
+        // Add score
+        $score = session()->get('score');
+        session()->put('score', ++$score);
+    }
+
+    private function decreaseLives()
+    {
+        $lives = session()->get('lives');
+        session()->put('lives', --$lives);
+    }
+
+    private function isGameOver()
+    {
+        return false;
     }
 
 }
