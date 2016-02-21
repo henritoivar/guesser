@@ -63,9 +63,10 @@ a.btn-link {
   width: 25%;
   float: left;
   min-height: $gap-10;
-  background-color: $brand-primary;
+  background-color: #FFF9C4;
   border-radius: 0;
-  color: #fff;
+  color: $brand-primary;
+  font-size: $gap-8;
 }
 
 // FLOATING ACTION BUTTON

@@ -5793,7 +5793,14 @@ a.btn-link {
   box-shadow: 0 7px 18px 0 rgba(0, 0, 0, 0.16), 0 7px 24px 0 rgba(0, 0, 0, 0.12); }
 
 .btn-choice {
-  min-width: 72px; }
+  min-width: 72px;
+  width: 25%;
+  float: left;
+  min-height: 72px;
+  background-color: #FFF9C4;
+  border-radius: 0;
+  color: #673AB7;
+  font-size: 44px; }
 
 .btn--floating {
   position: absolute;
@@ -5929,7 +5936,7 @@ a.btn-link {
   padding: 24px 16px 16px 16px; }
 
 .panel {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border: 0; }
 
 .panel-heading {
@@ -6029,6 +6036,9 @@ h3, .h3 {
 
 html, body {
   height: 100%; }
+
+body {
+  background: linear-gradient(135deg, rgba(124, 77, 255, 0.16) 0%, #fff9c4 100%); }
 
 .display-b {
   display: block; }

@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <div class="container-fluid guesser">
+    <div class="container guesser">
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="text-center guesser-title">Where is it?</h1>
@@ -13,7 +13,7 @@
                     <div class="panel-body no-padding">
                         <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}" class="img-responsive lazy" src="{{ $correct['url_c'] }}" alt="">
                     </div>
-                    <div class="panel-footer text-right">
+                    <div class="panel-footer text-right no-padding">
                         @foreach($options as $option)
                             <button data-answer-id="{{ $option['id'] }}" class="btn btn-link btn-choice relative submit-answer">{{ $option['letter'] }}</button>
                         @endforeach
@@ -42,7 +42,7 @@
         $("img.lazy").lazyload({
             effect : "fadeIn"
         });
-        
+
         $(document).ready(function () {
 
             // Guess answer
