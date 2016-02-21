@@ -22,7 +22,7 @@
                 <div class="panel panel-default panel-guesser relative">
                     <div class="panel-body no-padding">
                         <img width="{{ $correct['width_c'] }}" height="{{ $correct['height_c'] }}"
-                             class="img-responsive lazy" src="{{ $correct['url_c'] }}" alt="">
+                             class="img-responsive lazy" data-original="{{ $correct['url_c'] }}" alt="">
                     </div>
                     <div id="options" class="panel-footer no-padding relative float-fix">
                         @foreach($options as $option)

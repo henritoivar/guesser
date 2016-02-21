@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'max' => 5,
-    'default' => 3
+    'max' => 2,
+    'default' => 1
 ];
