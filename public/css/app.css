@@ -5831,7 +5831,7 @@ a.btn-link {
 .panel-guesser {
   overflow: hidden; }
   .panel-guesser:after {
-    content: ' ';
+    content: attr(answer-content);
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -5849,18 +5849,12 @@ a.btn-link {
 
 .correct-answer:after,
 .incorrect-answer:after {
-  -webkit-animation: roll-in 1.5s 2 alternate backwards;
-  animation: roll-in 1.5s 2 alternate backwards; }
-
-.correct-answer:after {
-  content: 'Correct!'; }
-
-.incorrect-answer:after {
-  content: 'Nope!'; }
+  -webkit-animation: roll-in 1.5s forwards;
+  animation: roll-in 1.5s forwards; }
 
 .continue-container {
   position: absolute;
-  z-index: 1;
+  z-index: 99;
   top: 0;
   bottom: 0;
   left: 0;
@@ -5884,7 +5878,8 @@ a.btn-link {
   .points i {
     color: #FBC02D; }
 
-.ripple:before {
+.ripple-forwards:before,
+.ripple-backwards:before {
   content: ' ';
   position: absolute;
   display: block;
@@ -5897,9 +5892,15 @@ a.btn-link {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  opacity: 0;
-  -webkit-animation: ripple-animation 1.6s 2 alternate backwards;
-  animation: ripple-animation 1.6s 2 alternate backwards; }
+  opacity: 0; }
+
+.ripple-forwards:before {
+  -webkit-animation: ripple-animation 1s forwards;
+  animation: ripple-animation 1s forwards; }
+
+.ripple-backwards:before {
+  -webkit-animation: ripple-animation 1s backwards;
+  animation: ripple-animation 1s backwards; }
 
 @-webkit-keyframes ripple-animation {
   from {

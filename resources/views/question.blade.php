@@ -1,6 +1,24 @@
 @extends('app')
 
 @section('content')
+    <!-- result details -->
+    <div id="continue-container" class="continue-container" style="display: none">
+        <div id="correct-answer-text" style="display: none;">
+            <h1>You are crazy smart!</h1>
+            <h2>Have a kitten!</h2>
+            <h2>You gained a <3</h2>
+        </div>
+        <div id="incorrect-answer-text" style="display: none">
+            <h1>Dang!</h1>
+            <h2>You lost a <3</h2>
+        </div>
+        <div id="answer-details">
+
+        </div>
+        <a class="btn btn-link" href="{{ action('QuestionController@showQuestion') }}">Continue</a>
+    </div>
+    
+    <!-- main content -->
     <div class="container guesser">
         <div class="row">
             <div class="col-xs-12">
@@ -19,21 +37,6 @@
                              class="img-responsive lazy" src="{{ $correct['url_c'] }}" alt="">
                     </div>
                     <div id="options" class="panel-footer no-padding relative float-fix">
-                        <div id="continue-container" class="continue-container" style="display: none">
-                            <div id="correct-answer-text" style="display: none;">
-                                <h1>You are crazy smart!</h1>
-                                <h2>Have a kitten!</h2>
-                                <h2>You gained a <3</h2>
-                            </div>
-                            <div id="incorrect-answer-text" style="display: none">
-                                <h1>Dang!</h1>
-                                <h2>You lost a <3</h2>
-                            </div>
-                            <div id="answer-details">
-
-                            </div>
-                            <a class="btn btn-link" href="{{ action('QuestionController@showQuestion') }}">Continue</a>
-                        </div>
                         @foreach($options as $option)
                             <button data-answer-id="{{ $option['id'] }}"
                                     class="btn btn-link btn-choice relative submit-answer">{{ $option['letter'] }}</button>
@@ -69,10 +72,12 @@
         $(document).ready(function () {
             // Guess answer
             $('.submit-answer').click(function () {
-                $(this).addClass("ripple");
-
-                // Show loader
-                $('#loader').show();
+                var submitAnswerBtn = $(this);
+                
+                // ripple forwards
+                submitAnswerBtn.addClass("ripple-forwards");
+                // Set loading text
+                $('.panel-guesser').attr('answer-content', 'Aaand..');
 
                 var answerId = $(this).data('answer-id');
                 guess(answerId, function (response) {
@@ -82,25 +87,26 @@
                     // Hide loader
                     $('#loader').hide();
 
-                    // Hide the options
-                    // $('#options').hide();
-
-                    // Show continue button
-                    $('#continue-container').fadeIn(400);
-
                     if (response.answerCorrect === true) {
                         // Show that answer was correct
+                        $('.panel-guesser').attr('answer-content', 'Correct!');
                         $('.panel-guesser').addClass('correct-answer');
 
                         // Show correct answer text
                         $('#correct-answer-text').show();
                     } else {
                         // Show that answer was incorrect
+                        $('.panel-guesser').attr('answer-content', 'Nope!');
                         $('.panel-guesser').addClass('incorrect-answer');
 
                         // Show incorrect answer text
                         $('#incorrect-answer-text').show();
                     }
+
+                    // Show continue button
+                    setTimeout(function() {
+                        // $('#continue-container').fadeIn(400);
+                    }, 2000);
 
                     // Add answer details
 

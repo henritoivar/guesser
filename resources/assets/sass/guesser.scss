@@ -2,7 +2,7 @@
 .panel-guesser {
 	overflow: hidden;
 	&:after {
-	content: ' ';
+	content: attr(answer-content);
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -22,22 +22,22 @@
 .correct-answer,
 .incorrect-answer {
     &:after {
-        animation: roll-in 1.5s 2 alternate backwards;
+        animation: roll-in 1.5s forwards;
     }
 }
-.correct-answer {
-    &:after {
-        content: 'Correct!';
-    }
-}
-.incorrect-answer {
-    &:after {
-        content: 'Nope!';
-    }
-}
+// .correct-answer {
+//     &:after {
+//         content: 'Correct!';
+//     }
+// }
+// .incorrect-answer {
+//     &:after {
+//         content: 'Nope!';
+//     }
+// }
 .continue-container {
     position: absolute;
-    z-index: 1;
+    z-index: 99;
     top: 0;
     bottom: 0;
     left: 0;
@@ -63,7 +63,8 @@
         color: #FBC02D;
     }
 }
-.ripple {
+.ripple-forwards,
+.ripple-backwards {
 	&:before {
     content: ' ';
     position: absolute;
@@ -79,8 +80,18 @@
     height: 50px;
     opacity: 0;
     // animation: ripple-animation 1s forwards;
-    animation: ripple-animation 1.6s 2 alternate backwards;
+    // animation: ripple-animation 1.6s 2 alternate backwards;
 	}
+}
+.ripple-forwards {
+    &:before {
+        animation: ripple-animation 1s forwards;
+    }
+}
+.ripple-backwards {
+    &:before {
+        animation: ripple-animation 1s backwards;
+    }
 }
 @keyframes ripple-animation {
     from {
