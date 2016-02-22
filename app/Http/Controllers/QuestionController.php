@@ -19,7 +19,13 @@ class QuestionController extends Controller
         }
 
         // Get our options
-        $options = $this->getOptions();
+        $options = $this->getOptions(session()->get('location'));
+
+        //  Not enough options
+        if (!$options) {
+            return redirect()->action('LocationController@showLocationChoice')
+                ->withErrors(['Nobody hangs out here! Choose another place']);
+        }
 
         // Choose a correct answer
         $correct = $options->random();
@@ -44,10 +50,7 @@ class QuestionController extends Controller
         return view('question')->with(compact('options', 'correct'));
     }
 
-    private function getOptions(){
-
-        // Get location
-        $location = session()->get('location');
+    private function getOptions($location){
 
         // Get images
         $listingUrl = 'https://api.flickr.com/services/rest';
@@ -79,6 +82,10 @@ class QuestionController extends Controller
         $listingCollection = $listingCollection->filter(function ($item) {
             return isset($item['url_c']);
         });
+
+        if ($listingCollection->count() < 4) {
+            return false;
+        }
 
         $options = $listingCollection->random(4);
 

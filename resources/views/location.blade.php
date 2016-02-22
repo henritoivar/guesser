@@ -9,6 +9,15 @@
             </div>
         </div>
         <div class="col-sm-8 col-sm-offset-2">
+            
+            @if(count($errors) > 0)
+                <h2>
+                    @foreach ($errors->all() as $error)
+                        {{ $error }}
+                    @endforeach
+                </h2>
+            @endif
+
             <form action="{{ action('LocationController@setLocation') }}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="latitude">
