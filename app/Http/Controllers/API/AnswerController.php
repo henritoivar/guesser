@@ -42,7 +42,7 @@ class AnswerController extends Controller
         $details = $details['photo'];
 
         // Get icon url
-        if (isset($details['owner']['iconfarm'])) {
+        if (isset($details['owner']['iconfarm']) && isset($details['owner']['iconserver']) && isset($details['owner']['nsid'])) {
             $details['owner']['iconUrl'] = 'http://farm' . $details['owner']['iconfarm'] . '.staticflickr.com/' . $details['owner']['iconserver'] . '/buddyicons/' . $details['owner']['nsid'] . '.jpg';
         }
 
