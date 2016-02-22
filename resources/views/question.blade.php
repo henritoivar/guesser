@@ -41,10 +41,6 @@
                     </div>
                 </div>
             </div>
-
-            <div id="loader" style="display: none;">
-                loading ...
-            </div>
         </div>
     </div>
 
@@ -74,9 +70,6 @@
 
                     var answerId = $(this).data('answer-id');
                     guess(answerId, function (response) {
-
-                        // Hide loader
-                        $('#loader').hide();
 
                         if (response.answerCorrect === true) {
                             // Show that answer was correct
