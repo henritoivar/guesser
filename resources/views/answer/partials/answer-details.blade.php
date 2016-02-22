@@ -1,6 +1,8 @@
 
 @if(isset($details['title']['_content']))
-    <h4>This picture is titled <span class="text-primary">"{{ $details['title']['_content'] }}"</span></h4>
+    @if(trim($details['title']['_content']))
+        <h4>This picture is titled <span class="text-primary">"{{ $details['title']['_content'] }}"</span></h4>
+    @endif
 @endif
 
 <h4 class="padding-tb--md">
@@ -13,12 +15,17 @@
        <img src="{{ $details['owner']['iconUrl'] }}" class="img-circle">
     @endif
 
-    {{ $details['owner']['realname'] }}
+    @if(isset($details['owner']['realname']))
+        {{ $details['owner']['realname'] }}
+    @endif
 
     @if(isset($details['owner']['location']))
-        from <strong>{{ $details['owner']['location'] }}</strong>
+        @if(trim($details['owner']['location']))
+            from <strong>{{ $details['owner']['location'] }}</strong>
+        @endif
     @endif
-    and has been viewed <strong>{{ $details['views'] }}</strong> times</h4>
+    and has been viewed <strong>{{ $details['views'] }}</strong> times
+</h4>
 
 @if(isset($details['location']['neighbourhood']['_content']))
     <h4>The hood is <strong>{{ $details['location']['neighbourhood']['_content'] }} ;)</strong></h4>

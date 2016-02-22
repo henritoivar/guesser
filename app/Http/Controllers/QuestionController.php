@@ -61,7 +61,7 @@ class QuestionController extends Controller
             'nojsoncallback' => 1,
             'sort' => 'interestingness-desc',
             'accuracy' => '16',
-            'radius' => '15',
+            'radius' => '20',
             'extras' => 'geo,url_c',
             //'tags' => 'cake',
             // 'tag_mode' => 'all'

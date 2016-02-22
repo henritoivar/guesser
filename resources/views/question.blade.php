@@ -13,9 +13,10 @@
                 <h1 class="guesser-title">Where is it?</h1>
                 <div class="points">
                     <h3><strong>{{ session()->get('lives') }}</strong> <i class="material-icons md-48">favorite</i></h3>
-                    <h3><strong>{{ session()->get('score') }}</strong> <i class="material-icons md-48">attach_money</i></h3>
+                    <h3><strong>{{ session()->get('score') }}</strong> <i class="material-icons md-48">local_cafe</i></h3>
                 </div>
             </div>
+
             <!-- image card -->
             <div class="col-xs-5">
                 <!-- image container -->
