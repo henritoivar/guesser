@@ -5854,8 +5854,10 @@ a.btn-link {
     opacity: 0; }
 
 .loading-answer:after {
-  -webkit-animation: roll-in 1.5s forwards;
-  animation: roll-in 1.5s forwards; }
+  -webkit-animation: roll-in 1.5s forwards, pulse 3s infinite;
+  animation: roll-in 1.5s forwards, pulse 3s infinite;
+  -webkit-animation-delay: 0s, 2s;
+  animation-delay: 0s, 2s; }
 
 .continue-container {
   position: absolute;
@@ -5963,6 +5965,40 @@ a.btn-link {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
+
+@-webkit-keyframes pulse {
+  0 {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  60% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes pulse {
+  0 {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  60% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 .modal-title {
   font-weight: 700; }
