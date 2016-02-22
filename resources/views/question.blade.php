@@ -37,7 +37,7 @@
             <div class="col-xs-7">
                 <div class="panel panel-default">
                     <div class="panel-body no-padding">
-                        @include('map')
+                        @include('partials.map')
                     </div>
                 </div>
             </div>
@@ -48,61 +48,63 @@
         </div>
     </div>
 
-    <!-- Lazy images -->
-    <script src="{{ asset('lib/jquery_lazyload/jquery.lazyload.js') }}"></script>
+    @section('scripts')
+        @parent
+        <!-- Lazy images -->
+        <script src="{{ asset('lib/jquery_lazyload/jquery.lazyload.js') }}"></script>
 
-    <script>
-        // load lazy images
-        $("img.lazy").lazyload({
-            effect: "fadeIn"
-        });
+        <script>
+            // load lazy images
+            $("img.lazy").lazyload({
+                effect: "fadeIn"
+            });
 
-        $(document).ready(function () {
-            // Guess answer
-            $('.submit-answer').click(function () {
-                // disable the answer buttons
-                $(this).siblings().prop('disabled', true);
+            $(document).ready(function () {
+                // Guess answer
+                $('.submit-answer').click(function () {
+                    // disable the answer buttons
+                    $(this).siblings().prop('disabled', true);
 
-                var submitAnswerBtn = $(this);
-                
-                // ripple forwards
-                submitAnswerBtn.addClass("ripple-forwards");
-                // Set loading text
-                $('.panel-guesser').attr('answer-content', 'Aaand..').addClass('loading-answer');
+                    var submitAnswerBtn = $(this);
 
-                var answerId = $(this).data('answer-id');
-                guess(answerId, function (response) {
+                    // ripple forwards
+                    submitAnswerBtn.addClass("ripple-forwards");
+                    // Set loading text
+                    $('.panel-guesser').attr('answer-content', 'Aaand..').addClass('loading-answer');
 
-                    // Hide loader
-                    $('#loader').hide();
+                    var answerId = $(this).data('answer-id');
+                    guess(answerId, function (response) {
 
-                    if (response.answerCorrect === true) {
-                        // Show that answer was correct
-                        $('.panel-guesser').attr('answer-content', 'Correct!');
-                        $('.panel-guesser').addClass('correct-answer');
-                    } else {
-                        // Show that answer was incorrect
-                        $('.panel-guesser').attr('answer-content', 'Nope!');
-                        $('.panel-guesser').addClass('incorrect-answer');
-                    }
+                        // Hide loader
+                        $('#loader').hide();
 
-                    // Show continue button
-                    setTimeout(function() {
-                        $('#continue-container').fadeIn(400);
-                    }, 2000);
+                        if (response.answerCorrect === true) {
+                            // Show that answer was correct
+                            $('.panel-guesser').attr('answer-content', 'Correct!');
+                            $('.panel-guesser').addClass('correct-answer');
+                        } else {
+                            // Show that answer was incorrect
+                            $('.panel-guesser').attr('answer-content', 'Nope!');
+                            $('.panel-guesser').addClass('incorrect-answer');
+                        }
 
-                    // Add answer details
-                    $('.continue-container').html(response.detailsHtml);
+                        // Show continue button
+                        setTimeout(function() {
+                            $('#continue-container').fadeIn(400);
+                        }, 2000);
 
+                        // Add answer details
+                        $('.continue-container').html(response.detailsHtml);
+
+                    });
                 });
             });
-        });
 
-        function guess(answerId, callback) {
-            $.post('{{ action('API\AnswerController@guess') }}', {
-                answerId: answerId
-            }, callback);
-        }
-    </script>
-
+            function guess(answerId, callback) {
+                $.post('{{ action('API\AnswerController@guess') }}', {
+                    answerId: answerId
+                }, callback);
+            }
+        </script>
+    @stop
 @endsection

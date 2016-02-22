@@ -18,20 +18,20 @@ class AnswerController extends Controller
         if ($correct['id'] === $request->get('answerId')) {
             $this->addLives();
             $answerCorrect = true;
-            $view = 'correct-answer';
+            $view = 'answer.correct-answer';
             $message = 'Correct answer!';
         }else{
             $this->decreaseLives();
             $answerCorrect = false;
             $message = 'Wrong answer!';
-            $view = 'incorrect-answer';
+            $view = 'answer.incorrect-answer';
         }
 
         $score = session()->get('score');
 
         // Game over ?
         if ($this->isGameOver()) {
-            $view = 'game-over';
+            $view = 'answer.game-over';
 
             session()->put('score', 0);
             session()->put('lives', config('lives.default'));

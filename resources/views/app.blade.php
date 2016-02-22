@@ -21,11 +21,14 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- jQuery -->
-    <script src="{{ asset('lib/jquery/dist/jquery.js') }}"></script>
 </head>
 <body>
     <!-- Content -->
     @yield('content')
+
+    @section('scripts')
+        <!-- jQuery -->
+        <script src="{{ asset('lib/jquery/dist/jquery.js') }}"></script>
+    @show
 </body>
 </html>
