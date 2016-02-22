@@ -17,6 +17,11 @@ class LocationController extends Controller
 
     public function setLocation(Request $request)
     {
+        // Don't allow empty location
+        if (!$request->get('latitude') || !$request->get('longitude')) {
+            return redirect()->action('LocationController@showLocationChoice');
+        }
+
         // Set location
         session()->set('location', array(
             'latitude' => $request->get('latitude'),
