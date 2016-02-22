@@ -13,6 +13,11 @@ class QuestionController extends Controller
 {
     public function showQuestion()
     {
+        // Check if session is set
+        if (!session()->get('lives')) {
+            return redirect()->action('LocationController@setLocation');
+        }
+
         // Get our options
         $options = $this->getOptions();
 
